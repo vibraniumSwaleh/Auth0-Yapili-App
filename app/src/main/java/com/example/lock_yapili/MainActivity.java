@@ -37,49 +37,6 @@ public class MainActivity extends AppCompatActivity {
     ImageView profilePicture;
     Button logoutButton;
     private Lock lock;
-
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
-
-        //object binding
-        emailText = findViewById(R.id.userEmail);
-        profilePicture = findViewById(R.id.profilePicture);
-        logoutButton = findViewById(R.id.logoutBtn);
-
-        //creating Auth0 object
-        Auth0 account = new Auth0(getString(
-                R.string.com_auth0_client_id),
-                getString(R.string.com_auth0_domain));
-
-        //enabling certified OpenID Connect (OIDC) provider
-        account.setOIDCConformant(true);
-
-        authentication = new AuthenticationAPIClient(account);
-
-        //lock UI activity build
-        lock = Lock.newBuilder(account, callBack)//adding custom social login styles
-                .withAuthStyle(FACEBOOK, R.style.Style_Facebook)
-                .withAuthStyle(GOOGLE, R.style.Lock_Theme_AuthStyle_GoogleOAuth2)
-                .withAuthStyle(LINKEDIN, R.style.Lock_Theme_AuthStyle_LinkedIn)
-                .build(this);
-
-        //sign in a user after signing up automatically
-        lock.getOptions().loginAfterSignUp();
-
-        //start lock activity
-        startActivity(lock.newIntent(this));
-
-        //user logout
-        logoutButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                startActivity(lock.newIntent(getApplicationContext()));
-            }
-        });
-    }
-
     //callback method for authentication
     private LockCallback callBack = new AuthenticationCallback() {
         @Override
@@ -89,10 +46,10 @@ public class MainActivity extends AppCompatActivity {
                     .start(new BaseCallback<com.auth0.android.result.UserProfile, AuthenticationException>() {
                         @Override
                         public void onSuccess(com.auth0.android.result.UserProfile payload) {
-
-                            //emailText.setText("Email: " + payload.getEmail());
+                            //display user email
+                            emailText.setText(getString(R.string.text_view_email_placeholder) + ":  " + payload.getEmail());
+                            //display user profile picture
                             setProfileImage(payload.getPictureURL());
-
                         }
 
                         @Override
@@ -137,6 +94,48 @@ public class MainActivity extends AppCompatActivity {
                     Toast.LENGTH_LONG).show();
         }
     };
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+
+        //object binding
+        emailText = findViewById(R.id.userEmail);
+        profilePicture = findViewById(R.id.profilePicture);
+        logoutButton = findViewById(R.id.logoutBtn);
+
+        //creating Auth0 object
+        Auth0 account = new Auth0(getString(
+                R.string.com_auth0_client_id),
+                getString(R.string.com_auth0_domain));
+
+        //enabling certified OpenID Connect (OIDC) provider
+        account.setOIDCConformant(true);
+
+        authentication = new AuthenticationAPIClient(account);
+
+        //lock UI activity build
+        lock = Lock.newBuilder(account, callBack)//adding custom social login styles
+                .withAuthStyle(FACEBOOK, R.style.Style_Facebook)
+                .withAuthStyle(GOOGLE, R.style.Lock_Theme_AuthStyle_GoogleOAuth2)
+                .withAuthStyle(LINKEDIN, R.style.Lock_Theme_AuthStyle_LinkedIn)
+                .build(this);
+
+        //sign in a user after signing up automatically
+        lock.getOptions().loginAfterSignUp();
+
+        //start lock activity
+        startActivity(lock.newIntent(this));
+
+        //user logout
+        logoutButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(lock.newIntent(getApplicationContext()));
+            }
+        });
+    }
 
     //destroy lock activity on activity destroy
     @Override
