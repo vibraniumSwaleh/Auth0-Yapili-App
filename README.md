@@ -22,17 +22,17 @@ You will need the following to run this project:
 ### Sign In Screen
 When the application is launched, the first screen that is presented to the user is the logIn/SignUp screen. A user will have a variety of login/signup option to use.
 
-<img src="screenshots/signin.png" width="250" height="400"/>
+<img src="screenshots/signin.png" width="200" height="400"/>
 
 ### Sign Up Screen
 The user can also sign up to the application from any of the options seen in the image below:
 
-<img src="screenshots/signup.png" width="250" height="400"/>
+<img src="screenshots/signup.png" width="200" height="400"/>
 
 ### User Information Screen
 On successful signin, the user is redirected to a screen which displays his/her account details. From this screen, the user can logout by pressing the logout button.
 
-<img src="screenshots/user.png" width="250" height="400"/>
+<img src="screenshots/user.png" width="200" height="400"/>
 
 
 
