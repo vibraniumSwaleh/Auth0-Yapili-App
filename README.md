@@ -9,7 +9,7 @@ Auth0-Yapili-App is an application that implements the Auth0 SDK for user authet
 The application uses Auth0 SDK's UI known as **Lock** to render the Ui for user signin/signup activities.
 Auth0 offers **widgets** and **SDKs** that provide a simple and frictionless experience for developers for authnrication.
 
-The application can be downloaded from: [application download](http://www.quora.com/Adam-DAngelo)
+The application can be downloaded from: [application download .apk file](http://www.quora.com/Adam-DAngelo)
 
 ## Prerequisites
 You will need the following to run this project:
