@@ -22,9 +22,9 @@ You will need the following to run this project:
 ### Login Screen
 When the application is launched, the first screen that is presented to the user is the logIn/SignUp screen. A user will have a variety of login/signup option to use.
 
-![alt text][signin]
-![alt text][signup]
-![alt text][user]
+![alt text](https://github.com/vibraniumSwaleh/Auth0-Yapili-App/tree/master/screenshots/signin)
+![alt text](https://github.com/vibraniumSwaleh/Auth0-Yapili-App/tree/master/screenshots/signup)
+![alt text](https://github.com/vibraniumSwaleh/Auth0-Yapili-App/tree/master/screenshots/user)
 
 
 
