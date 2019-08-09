@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="parent_linear_layout_width">343dp</dimen>
+    <dimen name="parent_linear_layout_height">474dp</dimen>
+    <dimen name="parent_linear_layout_padding">8dp</dimen>
+    <dimen name="image_layout_width">195dp</dimen>
+    <dimen name="image_layout_height">189dp</dimen>
+    <dimen name="image_layout_margin">8dp</dimen>
+    <dimen name="text_view_layout_margin">4dp</dimen>
+    <dimen name="text_view_text_size">15sp</dimen>
+    <dimen name="button_layout_height">50dp</dimen>
+    <dimen name="button_layout_margin">4dp</dimen>
+</resources>

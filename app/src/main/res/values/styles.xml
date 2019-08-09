@@ -1,0 +1,38 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+
+
+    <style name="MyTheme" parent="Lock.Theme">
+        <item name="Auth0.HeaderLogo">@drawable/yapili_logo</item>
+        <item name="Auth0.HeaderTitle">@string/app_name</item>
+        <item name="Auth0.HeaderTitleColor">@color/transparent</item>
+        <item name="Auth0.PrimaryColor">@color/colorPrimary</item>
+        <item name="Auth0.DarkPrimaryColor">@color/colorPrimaryDark</item>
+    </style>
+
+
+
+    <style name="Style.Facebook" parent="Lock.Theme.AuthStyle">
+        <item name="Auth0.Logo">@drawable/facebook</item>
+        <item name="Auth0.BackgroundColor">@color/com_auth0_lock_social_facebook</item>
+    </style>
+
+    <style name="Lock.Theme.AuthStyle.GoogleOAuth2" parent="Lock.Theme.AuthStyle">
+        <item name="Auth0.Logo">@drawable/gmail</item>
+        <item name="Auth0.BackgroundColor">@color/com_auth0_lock_social_google_oauth2</item>
+    </style>
+
+    <style name="Lock.Theme.AuthStyle.LinkedIn" parent="Lock.Theme.AuthStyle">
+        <item name="Auth0.Logo">@drawable/com_auth0_lock_ic_social_linkedin</item>
+        <item name="Auth0.BackgroundColor">@color/com_auth0_lock_social_linkedin</item>
+    </style>
+
+</resources>

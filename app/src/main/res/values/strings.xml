@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Yapili</string>
+    <string name="com_auth0_client_id">U1bc0PLQrC3z6kzg3QLvvaG0GdPIYJot</string>
+    <string name="com_auth0_domain">dev-knuvf6fj.auth0.com</string>
+
+    <string name="facebook_app_id">1695968743867064</string>
+    <string name="text_view_font_type">serif</string>
+    <string name="text_view_email_placeholder">Email</string>
+    <string name="button_text_placeholder">Logout</string>
+</resources>
