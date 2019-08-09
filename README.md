@@ -19,14 +19,20 @@ You will need the following to run this project:
 + Clone the Repository from Github
 + Open the project folder using Android Studio IDE
 
-### Login Screen
+### Sign In Screen
 When the application is launched, the first screen that is presented to the user is the logIn/SignUp screen. A user will have a variety of login/signup option to use.
 
-![signin](https://github.com/vibraniumSwaleh/Auth0-Yapili-App/tree/master/screenshots/signin.jpeg)
+<img src="screenshots/signin.png" width="200" height="400"/>
 
-![signup](https://github.com/vibraniumSwaleh/Auth0-Yapili-App/tree/master/screenshots/signup.jpeg)
+### Sign Up Screen
+The user can also sign up to the application from any of the options seen in the image below:
 
-![user page](https://github.com/vibraniumSwaleh/Auth0-Yapili-App/tree/master/screenshots/user.jpeg)
+<img src="screenshots/signup.png" width="200" height="400"/>
+
+### User Information Screen
+On successful signin, the user is redirected to a screen which displays his/her account details. From this screen, the user can logout by pressing the logout button.
+
+<img src="screenshots/user.png" width="200" height="400"/>
 
 
 
